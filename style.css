@@ -1,5 +1,4 @@
-*
-{
+*{
     margin: 0;
     padding: 0;
 }
@@ -9,6 +8,8 @@ body
     font-family: sans-serif;
 }
 
+/*Nav bar content and text effect*/  
+
 #nav-bar
 {
     position: sticky;
@@ -16,17 +17,19 @@ body
     z-index: 10;
 }
 
-
 .navbar
 {
-    background-color: grey;
+    background-color: black;
     padding: 0 !important;
 }
 
 .navbar-brand img 
 {
-    height: 80px;
+    height: 30%;
+    width: 30%;
+    margin-top: 5px;
     padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .navbar-nav li
@@ -35,98 +38,57 @@ body
 }
 
 .navbar-nav li a {
-    color: #fff !important;
+    color: #fcc700 !important;
     font-weight: 600;
 }
 
-
-/*services*/
-
-#services
-{
-    padding: 80px 0;
+.nav-links {
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
 }
-
-.service-img
-{
-    width: 300px;
-    margin-top: 20px;
-
+    
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
 }
-
-.services
-{
-    padding: 10px;
-}
-
-
-  /*Highlight image effect*/  
-    .layer{
-        background: transparent;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: 0.5s;
-    }
     
-    .layer:hover{
-    background: rgba(226,0,0,0.7);
-    } 
-    
-    .layer h3{
-    width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    }
-    
-
-
-/*Menu text effect*/  
-    .nav-links {
-        flex: 1;
-        text-align: right;
-    }
-    
-    .nav-links ul li{
-        list-style: none;
-        display: inline-block;
-        padding: 8px 12px;
-        position: relative;
-    }
-    
-    .nav-links ul li a{
-    color: #c60000;
+.nav-links ul li a{
+    color: #fcc700;
     text-decoration: none;
-    font-size: 13px;
-    }
-    
-    .nav-links ul li::after{
-        content: '';
-        width: 0%;
-        height: 2px;;
-        background: #c60000;
-        display: block;
-        margin: auto;
-        transition:0.4s;
-    }
-    
-    .nav-links ul li:hover::after{
-        width: 100%;
-    }    
+    font-size: 19px;
+}
 
-
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 4px;;
+    background: #fcc700;
+    display: block;
+    margin: auto;
+    transition:0.4s;
+}
+    
+.nav-links ul li:hover::after{
+    width: 100%;
+}    
 
   /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 .carousel,
 .item,
+
+.carousel {
+    height: 83vh;
+    width: 100%;
+    overflow:hidden;
+}
+.carousel .carousel-inner {
+    height:100%;    
+}
+
 .active {
     height: 100%;
     margin-bottom: 60px;
@@ -136,14 +98,74 @@ body
     height: 100%;
 }
 
-/* Background images are set within the HTML using inline CSS, not here */
-
 .fill {
+    background-position: center;
+    width: 100%;
+}
+
+/*services*/
+
+.services{
     width: 100%;
     height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    margin: auto;
+    text-align: center;
+    padding-top: 0px;
+    background-color: black;
 }
+
+.col-md-4{
+    flex-basis: 32%;
+    height: 580px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.col-md-4 image{
+    width: 100%;
+    height: 80%;
+}
+
+.service-img:hover {
+    background-color: black;
+    opacity: 0.5;
+}
+
+.carousel-text {
+    position: absolute;
+    text-align: center;
+    bottom: 10%;
+    left: 5%;
+    z-index: 20;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    padding-bottom: 120px;
+  }
+
+
+  .services-text {
+    position: absolute;
+    text-align: center;
+    bottom: 10%;
+    left: 5%;
+    z-index: 20;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  } 
+
+
+  .services-text ::after{
+    content: '';
+    width: 0%;
+    height: 4px;;
+    background: #fcc700;
+    display: block;
+    margin: auto;
+    transition:0.4s;
+}
+    
+.services-text :hover::after{
+    width: 100%;
+}    
